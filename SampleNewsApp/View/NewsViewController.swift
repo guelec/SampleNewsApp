@@ -7,21 +7,31 @@
 
 import UIKit
 
-class NewsViewController: UIViewController {
+class NewsViewController: UIViewController, NewsDelegate {
+    func reloadTable() {
+        tableView.reloadData()
+    }
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var tableView: UITableView!
+    
+    var viewModel: NewsViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.title = "Deneme"
+        title = "Deneme"
+        viewModel = NewsViewModel()
+        viewModel?.delegate = self
         
         tableView.register(UINib(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         
         tableView.delegate = self
         tableView.dataSource = self
         
+        viewModel?.fetchData {
+            tableView.reloadData()
+        }
     }
-
-
 }
+
+
