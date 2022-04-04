@@ -20,13 +20,15 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? NewsTableViewCell {
             cell.newsTitle.text = self.viewModel?.news?[indexPath.row].title
+            cell.newsSubtitle.text = self.viewModel?.news?[indexPath.row].summary
+            cell.newsImage.load(url: URL(string: self.viewModel?.news?[indexPath.row].mainImage.url ?? "")!)
             return cell
         }
         return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 240
+        return 300
     }
     
     

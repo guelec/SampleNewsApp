@@ -19,7 +19,7 @@ class NewsViewController: UIViewController, NewsDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        title = "Deneme"
+        title = "Haberler"
         viewModel = NewsViewModel()
         viewModel?.delegate = self
         
