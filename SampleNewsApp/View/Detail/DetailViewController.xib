@@ -25,8 +25,8 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVa-Qy-qS2">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7uL-Ip-C6G">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="464"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="7uL-Ip-C6G">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0n-Xf-aOj">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="232"/>
@@ -47,8 +47,8 @@
                                         <constraint firstAttribute="trailing" secondItem="CQm-OF-4ZN" secondAttribute="trailing" id="suG-aH-ooG"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvs-Vh-hLR">
-                                    <rect key="frame" x="0.0" y="232" width="414" height="232"/>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jvs-Vh-hLR">
+                                    <rect key="frame" x="0.0" y="664" width="414" height="232"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npn-UL-jr3">
                                             <rect key="frame" x="8" y="8" width="398" height="33.5"/>
