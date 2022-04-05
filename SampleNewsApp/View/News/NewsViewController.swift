@@ -31,6 +31,8 @@ class NewsViewController: UIViewController, NewsDelegate {
         viewModel?.fetchData {
             tableView.reloadData()
         }
+        
+        
     }
 }
 
